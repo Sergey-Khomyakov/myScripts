@@ -57,10 +57,10 @@ $(document).ready(function() {
                 });
 
                 card.btn.forEach(btn => {
-                    const $btn = $(`<a class="card__btn">${btn.text}</a>`);
+                    const $btn = $(`<a class="card__btn">№${btn.nextId} ${btn.text}</a>`);
                     $btn.on('click', (e) => {
                         e.preventDefault();
-                        obj.id = btn.nextId;
+                        obj.id = btn.nextId; 
                         obj.render(obj.id);
                     })
                     $cardHtml.find('.card__footer').append($btn);
